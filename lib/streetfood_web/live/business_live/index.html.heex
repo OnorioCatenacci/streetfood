@@ -1,0 +1,21 @@
+<.header>
+  Listing Businesses
+  <:actions>
+    <.link patch={~p"/businesses/new"}>
+      <.button>New Business</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<table>
+  <tbody>
+    <%= for business <- @businesses do %>
+      <tr>
+        <td><%= business.id %></td>
+        <td><%= business.applicant %></td>
+        <td><%= business.location_description %></td>
+        <td><%= business.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

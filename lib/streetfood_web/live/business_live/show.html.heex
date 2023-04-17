@@ -1,0 +1,25 @@
+<.header>
+  Business <%= @business.id %>
+  <:subtitle>This is a business record from your database.</:subtitle>
+  <:actions>
+    <.link patch={~p"/businesses/#{@business}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit business</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+</.list>
+
+<.back navigate={~p"/businesses"}>Back to businesses</.back>
+
+<.modal :if={@live_action == :edit} id="business-modal" show on_cancel={JS.patch(~p"/businesses/#{@business}")}>
+  <.live_component
+    module={StreetfoodWeb.BusinessLive.FormComponent}
+    id={@business.id}
+    title={@page_title}
+    action={@live_action}
+    business={@business}
+    patch={~p"/businesses/#{@business}"}
+  />
+</.modal>
