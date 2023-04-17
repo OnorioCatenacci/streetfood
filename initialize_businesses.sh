@@ -1,0 +1,1 @@
+awk -f 'import_csv.awk' $HOME/mobile_food_facility_permit.csv >> priv/repo/seeds.exs
