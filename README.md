@@ -19,6 +19,11 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 ## Other Notes
 
+### To Start This (Modest) App
+
+1.) Clone the git repository
+
+2.) 
 ### Importing the CSV file to the Database
 You can use initialize_business.sh to set up the seeding for the businesses into the repository.  Note: you will have to chmod +x in order to execute the initialize_business script.  You will, also, of course, modify the path to the csv file you're importing.
 

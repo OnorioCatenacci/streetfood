@@ -2,17 +2,15 @@
   Listing Businesses
 </.header>
 
-<table class="border border-slate-900">
-  <thead class="border border-slate-900">
-    <tr>
-      <td class="border border-slate-900">Applicant</td>
-      <td class="border border-slate-900">Location Description</td>
-      <td>Address</td>
-    </tr>
-  </thead>
+<table class="table-auto border">
+  <tr class="font-bold p-2 border-b text-left bg-indigo-700 text-white">
+    <th class="border border-slate-900">Applicant</th>
+    <th class="border border-slate-900">Location Description</th>
+    <th class="border border-slate-900">Address</th>
+  </tr>
   <tbody class="border border-solid border-slate-900">
     <%= for business <- @businesses do %>
-      <tr class="border border-slate-900">
+      <tr class="odd:bg-gray-300 border border-slate-900">
         <td class="border border-slate-900"><%= business.applicant %></td>
         <td class="border border-slate-900"><%= business.location_description %></td>
         <td class="border border-slate-900"><%= business.address %></td>

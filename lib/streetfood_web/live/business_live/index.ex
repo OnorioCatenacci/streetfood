@@ -2,7 +2,7 @@ defmodule StreetfoodWeb.BusinessLive.Index do
   use StreetfoodWeb, :live_view
 
   alias Streetfood.Businesses
-  alias Streetfood.Businesses.Business
+  #  alias Streetfood.Businesses.Business
 
   @impl true
   def mount(_params, _session, socket) do
@@ -10,7 +10,7 @@ defmodule StreetfoodWeb.BusinessLive.Index do
   end
 
   @impl true
-  def handle_params(params, _url, socket) do
+  def handle_params(_params, _url, socket) do
     {:noreply, assign_businesses(socket)}
   end
 
@@ -18,23 +18,23 @@ defmodule StreetfoodWeb.BusinessLive.Index do
     assign(socket, :businesses, Businesses.list_businesses())
   end
 
-  defp apply_action(socket, :edit, %{"id" => id}) do
-    socket
-    |> assign(:page_title, "Edit Business")
-    |> assign(:business, Businesses.get_business!(id))
-  end
+  # defp apply_action(socket, :edit, %{"id" => id}) do
+  #   socket
+  #   |> assign(:page_title, "Edit Business")
+  #   |> assign(:business, Businesses.get_business!(id))
+  # end
 
-  defp apply_action(socket, :new, _params) do
-    socket
-    |> assign(:page_title, "New Business")
-    |> assign(:business, %Streetfood.Business{})
-  end
+  # defp apply_action(socket, :new, _params) do
+  #   socket
+  #   |> assign(:page_title, "New Business")
+  #   |> assign(:business, %Streetfood.Business{})
+  # end
 
-  defp apply_action(socket, :index, _params) do
-    socket
-    |> assign(:page_title, "Listing Businesses")
-    |> assign(:business, nil)
-  end
+  # defp apply_action(socket, :index, _params) do
+  #   socket
+  #   |> assign(:page_title, "Listing Businesses")
+  #   |> assign(:business, nil)
+  # end
 
   @impl true
   def handle_info({StreetfoodWeb.BusinessLive.FormComponent, {:saved, business}}, socket) do

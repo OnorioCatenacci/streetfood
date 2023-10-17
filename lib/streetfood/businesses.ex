@@ -6,7 +6,7 @@ defmodule Streetfood.Businesses do
   import Ecto.Query, warn: false
   alias Streetfood.Repo
 
-  alias Streetfood.Businesses.Business
+  # alias Streetfood.Businesses.Business
 
   @doc """
   Returns the list of businesses.
@@ -32,7 +32,7 @@ defmodule Streetfood.Businesses do
       %Business{}
 
   """
-  def get_business!(id), do: raise("TODO")
+  def get_business!(_id), do: raise("TODO")
 
   @doc """
   Creates a business.
@@ -46,7 +46,7 @@ defmodule Streetfood.Businesses do
       {:error, ...}
 
   """
-  def create_business(attrs \\ %{}) do
+  def create_business(_attrs \\ %{}) do
     raise "TODO"
   end
 
@@ -62,7 +62,7 @@ defmodule Streetfood.Businesses do
       {:error, ...}
 
   """
-  def update_business(%Streetfood.Business{} = business, attrs) do
+  def update_business(%Streetfood.Business{} = _business, _attrs) do
     raise "TODO"
   end
 
@@ -78,7 +78,7 @@ defmodule Streetfood.Businesses do
       {:error, ...}
 
   """
-  def delete_business(%Streetfood.Business{} = business) do
+  def delete_business(%Streetfood.Business{} = _business) do
     raise "TODO"
   end
 
@@ -91,7 +91,7 @@ defmodule Streetfood.Businesses do
       %Todo{...}
 
   """
-  def change_business(%Streetfood.Business{} = business, _attrs \\ %{}) do
+  def change_business(%Streetfood.Business{} = _business, _attrs \\ %{}) do
     raise "TODO"
   end
 end

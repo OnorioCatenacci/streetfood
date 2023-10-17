@@ -18,7 +18,7 @@ defmodule StreetfoodWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    live "/businesses", BusinessLive.Index, :home
+    live "/Businesses", BusinessLive.Index, :home
   end
 
   # Other scopes may use custom stacks.
