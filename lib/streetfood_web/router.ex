@@ -19,6 +19,7 @@ defmodule StreetfoodWeb.Router do
 
     get "/", PageController, :home
     live "/Businesses", BusinessLive.Index, :home
+    live "/Businesses/Show/{id}", BusinessLive.Show, :home
   end
 
   # Other scopes may use custom stacks.

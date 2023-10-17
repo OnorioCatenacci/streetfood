@@ -6,7 +6,7 @@ defmodule StreetfoodWeb.BusinessLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    {:ok, assign_businesses(socket)}
   end
 
   @impl true
